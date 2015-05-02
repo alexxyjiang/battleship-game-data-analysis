@@ -25,8 +25,9 @@ def load_ship_types(list_ship):
         dict_name[item[0]]  = item[1]
         count               += 1
 
-# process one file
-def process_one_file(handle_in, handle_out):
+# process build file
+# Fuel Ammo Fe Al Name Type
+def process_build_file(handle_in, handle_out):
     for line in handle_in:
         items   = line.strip('\n').split('\t')
         if len(items) != 6:
@@ -41,6 +42,26 @@ def process_one_file(handle_in, handle_out):
                 list_out.append('1')
         handle_out.write('\t'.join(list_out))
         handle_out.write('\n')
+
+# process build file
+# Fuel Ammo Fe Al Type Count
+def process_stat_file(handle_in, handle_out):
+    for line in handle_in:
+        items   = line.strip('\n').split('\t')
+        if len(items) != 6:
+            continue
+        list_out    = items[0:len(dict_res)]
+        ship_out    = items[-2]
+        ship_count  = int(items[-1])
+        ship_index  = dict_ships[dict_name[ship_out]]
+        for i in range(len(dict_res), len(dict_index)):
+            if i != ship_index:
+                list_out.append('0')
+            else:
+                list_out.append('1')
+        for j in range(ship_count):
+            handle_out.write('\t'.join(list_out))
+            handle_out.write('\n')
 
 # do all
 def do_work(file_config):
@@ -61,7 +82,11 @@ def do_work(file_config):
             for item in confp.items('input'):
                 if item[0].find('build_data') != -1:
                     handle_in   = open(item[1])
-                    process_one_file(handle_in, handle_out)
+                    process_build_file(handle_in, handle_out)
+                    handle_in.close()
+                if item[0].find('stat_data') != -1:
+                    handle_in   = open(item[1])
+                    process_stat_file(handle_in, handle_out)
                     handle_in.close()
         handle_out.close()
 
