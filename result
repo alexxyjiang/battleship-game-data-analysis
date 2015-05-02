@@ -1,0 +1,80 @@
+
+Call:
+lm(formula = CV ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+ -1.267e-02   -7.170e-05    2.301e-05    1.169e-05    1.585e-04  
+
+
+Call:
+lm(formula = CVL ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+ -1.909e-01   -6.063e-04    9.951e-05    3.603e-04    1.213e-03  
+
+
+Call:
+lm(formula = CVS ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+ -1.147e-01   -3.450e-04    4.882e-05    2.251e-04    6.800e-04  
+
+
+Call:
+lm(formula = BB ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+  4.239e-01    1.063e-03   -6.934e-05   -3.321e-04   -2.027e-03  
+
+
+Call:
+lm(formula = BC ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+  4.703e-02    2.670e-04   -9.169e-05    1.282e-04   -5.856e-04  
+
+
+Call:
+lm(formula = CA ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+ -1.164e-01   -2.863e-04    8.905e-05    9.288e-04    4.533e-04  
+
+
+Call:
+lm(formula = CL ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+  8.483e-01   -5.807e-05   -2.131e-04   -1.077e-03    7.054e-05  
+
+
+Call:
+lm(formula = DD ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+  9.852e-02    6.310e-05    9.470e-05   -2.936e-04    1.375e-06  
+
+
+Call:
+lm(formula = BM ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+  1.700e-02   -2.596e-05    1.903e-05    4.865e-05    3.536e-05  
+
+
+Call:
+lm(formula = SS ~ Fuel + Ammo + Fe + Al, data = model_data)
+
+Coefficients:
+(Intercept)         Fuel         Ammo           Fe           Al  
+          0            0            0            0            0  
+
