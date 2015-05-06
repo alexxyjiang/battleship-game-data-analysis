@@ -2,9 +2,9 @@
 model_data  <- read.table("./data/allbuild.data",   head=T)
 lm_cv       <- lm(CV ~ Fuel + Ammo + Fe + Al,       data=model_data)
 lm_cv
-lm_cvl      <- lm(CVL ~ Fuel + Ammo + Fe + Al,       data=model_data)
+lm_cvl      <- lm(CVL ~ Fuel + Ammo + Fe + Al,      data=model_data)
 lm_cvl
-lm_cvs      <- lm(CVS ~ Fuel + Ammo + Fe + Al,       data=model_data)
+lm_cvs      <- lm(CVS ~ Fuel + Ammo + Fe + Al,      data=model_data)
 lm_cvs
 lm_bb       <- lm(BB ~ Fuel + Ammo + Fe + Al,       data=model_data)
 lm_bb
